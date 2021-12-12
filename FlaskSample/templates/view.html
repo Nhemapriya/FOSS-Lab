@@ -1,0 +1,40 @@
+<html>
+    <body align="center">
+        <table border="1" align="center">
+
+            <tr>
+                <td> Ticket ID </td>
+                <td> Ticket No </td>
+                <td> Ticket Name </td>
+                <td> start journey </td>
+                <td> end journey </td>
+                <td> Amount </td>
+            </tr>
+            {% for t in tickets %}
+
+            <tr>
+                <td>
+                    {{t. _id}}
+                </td>
+                <td>
+                    {{t.tno}}
+                </td>
+                <td>
+                    {{t.tname}}
+                </td>
+                <td>
+                    {{t.tstart}}
+                </td>
+                <td>
+                    {{t.tend}}
+                </td>
+                <td>
+                    {{t.tamt}}
+                </td>
+            </tr>
+
+
+            {% endfor %}
+        </table>
+    </body>
+</html>

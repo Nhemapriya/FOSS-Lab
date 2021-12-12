@@ -1,0 +1,117 @@
+VM - VirtualBox
+---------------------------------------------------------------------------
+https://www.virtualbox.org/wiki/Linux_Downloads
+cd Downloads
+.deb file will be present
+sudo dpkg -i virtualBox.deb //if error
+sudo apt -f install
+--search for virtualbox
+
+create vm using iso file (ubuntu-20.04.2.0-desktop-amd64.iso)
+===============================================
+
+VMWARE
+
+https://www.vmware.com/in/products/workstation-player/workstation-player-evaluation.html
+rename file -> vm.bundle
+=> chmod a+x vm.bundle
+=> ./vm.bundle
+
+ELSE => files => Alt+F => connect to server => smd://10.10.35.76 => Documents => pwd:black => copy
+
+=============================================
+FLASK LINKS
+
+https://linuxize.com/post/how-to-install-flask-on-ubuntu-18-04/
+https://stackoverflow.com/questions/52930341/pymongo-dnspython-module-must-be-installed-to-use-mongodbsrv-uris
+**https://www.qwiklabs.com/focuses/1014?parent=catalog
+
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-20-04
+=> python3 comes preinstalled
+=> sudo apt install python3
+python3  --version
+sudo apt install python3-venv
+python3 -m venv env
+source env/bin/activate
+
+
+pip install Flask
+pip install pymongo
+pip list | grep pymongo
+pip install pymongo[srv]
+
+client = pymongo.MongoClient("mongodb+srv://practiceUser:practiceUser@cluster0.vm6pv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+#mongodb+srv://Hema:L0uF0dvrx81udHpb@cluster0.vm6pv.mongodb.net/Library?retryWrites=true&w=majority
+mydb=client["Books"]
+mycol=mydb["BookDetails"]
+
+
+app.yaml 
+entrypoint:"gunicorn -b:$PORT main:app"
+env:flex
+runtime:python
+runtime_config:
+	python_version:3
+
+====================================================================
+GIT CMDS
+
+access-token: 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
+
+sudo apt update
+sudo apt install git
+git --version
+
+--------------------------------------------------------------------------
+mkdir folder
+cd folder
+gedit hello.txt
+git init
+git config --global user.name Nhemapriya
+git config --global user.email hemuhema2000@gmail.com
+git add .
+git commit -m "first commit"
+git remote add origin ""
+git push -u origin master
+git status
+git log
+
+BRANCH AND MERGE 
+
+git branch --list
+git branch hema
+git checkout hema
+create file and commit
+git push -u origin hema
+change readme
+git checkout master
+git pull
+
+git merge hema
+
+//DELETE BRANCH
+git branch -d hema
+git push --delete origin hema
+
+//RESET AND DELETE
+git reset --hard HEAD
+
+rm -rf .git
+==================================================================
+GCC 
+
+https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/
+
+sudo apt update
+sudo apt install build-essential
+sudo apt install manpages-dev
+gcc --version
+gcc sample.c
+./a.out
+==================================================================
+
+---------------------- CLOUD SIM-------------------------------------
+https://github.com/michaelfahmy/cloudsim-task-scheduling
+
+---------------------FILE TRANSFER GUEST TO HOST----------------------
+https://www.tecmint.com/enable-share-folder-in-vmware-workstation/
