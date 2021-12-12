@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script>
+        var books= []
+        function add()
+        {
+            var bid = document.getElementById("bid").value;
+            var bname = document.getElementById("bname").value;
+            var bauthor = document.getElementById("bauthor").value;
+            var userBook = []
+            userBook.push(bid);
+            userBook.push(bname)
+            userBook.push(bauthor)
+            books.push(userBook)
+            console.log(books)
+        }
+
+        function remove()
+        {
+            books.pop();
+            console.log(books)
+
+        }
+        
+        function show()
+        {
+           
+            for(var i=0;i<books.length;i++)
+            {
+                document.getElementById("res").innerHTML += "<tr>" + books[i] +"</tr>";
+            }
+                
+        }
+         </script>
+    </head>
+
+    <body align="center">
+
+        <table align="center">
+            <tr>
+                <td> Book ID : </td>
+                <td>   <input type="text" name="bid" id="bid"/> </td>
+            </tr>
+
+            <tr>
+                <td> Book Name : </td>
+                <td>  <input type="text" name="bname" id="bname"/> </td>
+            </tr>
+
+            <tr>
+                <td>  Author :  </td>
+                <td>  <input  type="text" name="bauthor" id="bauthor"/></td>
+            </tr>
+        </table>
+       
+    
+        <br/>
+        <input type="submit" onclick="add()" value="Add details"/>
+        <input type="submit" onclick="remove()" value="Delete entry"/>
+        <input type="submit" onclick="show()" value="show details"/>
+
+
+        <table align="center" id="res">
+
+        </table>
+    </body>
+</html>
