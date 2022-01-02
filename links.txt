@@ -8,6 +8,7 @@ sudo apt -f install
 --search for virtualbox
 
 create vm using iso file (ubuntu-20.04.2.0-desktop-amd64.iso)
+https://drive.google.com/file/d/1uwGL8deQXP7KBwTmUBFeFTWRMnRRZ6tp/view?usp=sharing
 ===============================================
 
 VMWARE
@@ -15,7 +16,7 @@ VMWARE
 https://www.vmware.com/in/products/workstation-player/workstation-player-evaluation.html
 rename file -> vm.bundle
 => chmod a+x vm.bundle
-=> ./vm.bundle
+=> (sudo) ./vm.bundle
 
 ELSE => files => Alt+F => connect to server => smd://10.10.35.76 => Documents => pwd:black => copy
 
@@ -45,6 +46,7 @@ client = pymongo.MongoClient("mongodb+srv://practiceUser:practiceUser@cluster0.v
 mydb=client["Books"]
 mycol=mydb["BookDetails"]
 
+auth token: 21zLoyqOXDMBV3J0A0UA2TUIJKt_3unqjxyfWKpbXu6A629ke
 
 app.yaml 
 entrypoint:"gunicorn -b:$PORT main:app"
@@ -56,7 +58,7 @@ runtime_config:
 ====================================================================
 GIT CMDS
 
-access-token: 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
+access-token: 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
 
 sudo apt update
 sudo apt install git
@@ -89,6 +91,8 @@ git pull
 
 git merge hema
 
+git clone url
+
 //DELETE BRANCH
 git branch -d hema
 git push --delete origin hema
@@ -108,10 +112,4 @@ sudo apt install manpages-dev
 gcc --version
 gcc sample.c
 ./a.out
-==================================================================
-
----------------------- CLOUD SIM-------------------------------------
-https://github.com/michaelfahmy/cloudsim-task-scheduling
-
----------------------FILE TRANSFER GUEST TO HOST----------------------
-https://www.tecmint.com/enable-share-folder-in-vmware-workstation/
+===================================================
